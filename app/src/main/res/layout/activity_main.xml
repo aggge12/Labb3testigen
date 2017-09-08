@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aggge12.labb3.MainActivity">
+
+    <TextView
+        android:id="@+id/timerPlayer2"
+        android:layout_width="80dp"
+        android:layout_height="43dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginTop="251dp"
+        android:text="TextView"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textplayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="White Player"
+        android:layout_marginRight="45dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="162dp" />
+
+    <TextView
+        android:id="@+id/textplayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Black Player"
+        android:layout_marginLeft="47dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="162dp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="StartCounting"
+        android:text="start"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="stop"
+        android:onClick="StopCounting"
+        app:layout_constraintLeft_toRightOf="@+id/startButton"
+        app:layout_constraintRight_toLeftOf="@+id/resetButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:onClick="ResetCount"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/timerPlayer1"
+        android:layout_width="80dp"
+        android:layout_height="43dp"
+        android:text="TextView"
+        android:gravity="center"
+        android:layout_marginLeft="43dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="251dp" />
+
+</android.support.constraint.ConstraintLayout>
