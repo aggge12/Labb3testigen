@@ -40,9 +40,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView player1 = (TextView) findViewById(R.id.timerPlayer1);
+        TextView player2 = (TextView) findViewById(R.id.timerPlayer2);
         selectedPlayer = 1;
         player1.setBackgroundColor(Color.parseColor("#ADD8E6"));
+        player1.setText(formatTime(0));
+        player2.setText(formatTime(0));
         timePlayer1millis = 0;
+        timePlayer2millis = 0;
         start = 0;
 
 
@@ -122,13 +126,13 @@ public class MainActivity extends AppCompatActivity {
         if (player == 1)
         {
             ResumeCounter(timePlayer1millis);
-            player2.setBackgroundColor(Color.parseColor("#ffffff"));
+            player2.setBackgroundResource(0);
             player1.setBackgroundColor(Color.parseColor("#ADD8E6"));
         }
         if (player == 2)
         {
             ResumeCounter(timePlayer2millis);
-            player1.setBackgroundColor(Color.parseColor("#ffffff"));
+            player1.setBackgroundResource(0);
             player2.setBackgroundColor(Color.parseColor("#ADD8E6"));
         }
     }
@@ -148,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         {
             ResumeCounter(timePlayer2millis);
         }
-        CountDownTimer timer1 =  new CountDownTimer(10000000, 100)
+        CountDownTimer timer1 =  new CountDownTimer(1000000, 100)
         {
 
             TextView player1 = (TextView) findViewById(R.id.timerPlayer1);
@@ -179,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onFinish()
             {
-
+                startCounter();
             }
         }.start();
 
